@@ -16,3 +16,5 @@ db = SQLAlchemy(app)
 
 from taskmanager import routes # noqa
 
+with app.app_context():
+    db.create_all()
